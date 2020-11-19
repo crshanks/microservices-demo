@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  front-end:
+    image: crshanks/sock-shop-front-end-nr:1.0
+    hostname: front-end
+    restart: always
+    cap_drop:
+      - all
+    read_only: true
+    environment:
+      - NEW_RELIC_LICENSE_KEY
